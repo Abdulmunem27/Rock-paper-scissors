@@ -51,20 +51,37 @@
             cursor: pointer;
             margin-left: 10px;
         }
+        .moves-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
+    <div class="container">
     <h1 style="margin-bottom: 40px;">Rock Paper Scissors Game</h1>
-    <button onclick="
-        playerMove('Rock')    
-    " class="move">✊</button>
-    <button onclick="
-        playerMove('Paper')
-    " class="move">🤚</button>
-    <button onclick="
-        playerMove('Scissors')        
-    " class="move">✌️</button>
-
+    <div class="moves-row">
+        <button onclick="
+            playerMove('Rock')    
+        " class="move">✊</button>
+        <button onclick="
+            playerMove('Paper')
+        " class="move">🤚</button>
+        <button onclick="
+            playerMove('Scissors')        
+        " class="move">✌️</button>
+    </div>
     <p class="js-result result"></p>
     <p class="js-moves moves"></p>
     <p class="js-score score"></p>
@@ -174,5 +191,6 @@
             
         }
     </script>
+    </div>
 </body>
-</htm>
+</html>
